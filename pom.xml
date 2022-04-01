@@ -30,7 +30,7 @@
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <quarkus.platform.version>2.7.5.Final</quarkus.platform.version>
     <!-- Spring -->
-    <spring.boot.version>2.6.5</spring.boot.version>
+    <spring.boot.version>2.6.6</spring.boot.version>
   </properties>
   <dependencyManagement>
     <dependencies>

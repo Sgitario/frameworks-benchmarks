@@ -13,10 +13,10 @@ import org.openjdk.jmh.annotations.Threads;
 import org.openjdk.jmh.annotations.Warmup;
 
 import io.jcloud.api.HttpService;
-import io.jcloud.api.Scenario;
+import io.jcloud.api.JCloud;
 import io.jcloud.core.ServiceState;
 
-@Scenario
+@JCloud
 @Fork(3)
 @Warmup(iterations = 1)
 @Measurement(iterations = 3)

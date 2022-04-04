@@ -1,4 +1,0 @@
-package io.sgitario.benchmarks.rest.jmh_generated;
-public class RestBenchmarks_QuarkusResteasyReactiveState_jmhType extends RestBenchmarks_QuarkusResteasyReactiveState_jmhType_B3 {
-}
-

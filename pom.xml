@@ -59,7 +59,7 @@
   </dependencyManagement>
   <modules>
     <module>rest-benchmark</module>
-    <module>data-benchmark</module>
+    <module>data-blocking-benchmark</module>
   </modules>
   <build>
     <plugins>

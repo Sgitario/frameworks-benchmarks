@@ -31,6 +31,8 @@
     <quarkus.platform.version>2.8.0.Final</quarkus.platform.version>
     <!-- Spring -->
     <spring.boot.version>2.6.6</spring.boot.version>
+    <!-- Databases -->
+    <postgresql.version>42.3.3</postgresql.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -55,11 +57,17 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>${postgresql.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <modules>
     <module>rest-benchmark</module>
     <module>data-blocking-benchmark</module>
+    <module>data-reactive-benchmark</module>
   </modules>
   <build>
     <plugins>

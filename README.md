@@ -85,3 +85,20 @@ public class FruitResource {
 
 }
 ```
+
+- Throughput
+
+![Throughput](results/data_blocking_Throughput.png)
+
+- Average Time
+
+![Average Time](results/data_blocking_Average_Time.png)
+
+- Single Shot-Time
+
+![Single Shot-Time](results/data_blocking_Single_ShotTime.png)
+
+## For Data Reactive application
+
+Same application as in [Data Blocking application](#for-data-blocking-application) but using the Reactive API for both Quarkus and Spring. 
+

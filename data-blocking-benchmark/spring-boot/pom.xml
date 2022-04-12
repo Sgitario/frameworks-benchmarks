@@ -10,7 +10,7 @@
   </parent>
   <artifactId>data-blocking-benchmark-spring-boot</artifactId>
   <properties>
-    <postgresql.version>42.3.2</postgresql.version>
+    <postgresql.version>42.3.3</postgresql.version>
   </properties>
   <dependencies>
     <dependency>

@@ -4,35 +4,35 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>io.sgitario.benchmarks</groupId>
-    <artifactId>data-blocking-benchmark-parent</artifactId>
+    <artifactId>data-reactive-benchmark-parent</artifactId>
     <version>0.0.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
-  <artifactId>data-blocking-benchmark-spring-boot</artifactId>
+  <artifactId>data-reactive-benchmark-quarkus</artifactId>
   <dependencies>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-hibernate-reactive-panache</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-reactive-pg-client</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-resteasy-reactive-jackson</artifactId>
     </dependency>
   </dependencies>
   <build>
     <plugins>
       <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>${spring.boot.version}</version>
+        <groupId>${quarkus.platform.group-id}</groupId>
+        <artifactId>quarkus-maven-plugin</artifactId>
+        <version>${quarkus.platform.version}</version>
         <executions>
           <execution>
             <goals>
-              <goal>repackage</goal>
+              <goal>build</goal>
             </goals>
           </execution>
         </executions>

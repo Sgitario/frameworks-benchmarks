@@ -8,13 +8,11 @@
     <version>0.0.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
-  <artifactId>rest-benchmark-parent</artifactId>
+  <artifactId>data-reactive-benchmark-parent</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>quarkus-resteasy-classic</module>
-    <module>quarkus-resteasy-reactive</module>
-    <module>spring-boot-web</module>
-    <module>spring-boot-webflux</module>
+    <module>quarkus</module>
+    <module>spring-boot</module>
     <module>benchmarks</module>
   </modules>
 </project>

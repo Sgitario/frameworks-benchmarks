@@ -56,6 +56,16 @@ public abstract class RestBenchmarks implements EnableBenchmark {
         }
     }
 
+    @Spring(location = "../spring-boot-webflux")
+    public static HttpService springWebFlux = new HttpService().setAutoStart(false);
+
+    public static class SpringWebFluxState extends ServiceState<HttpService> {
+
+        public SpringWebFluxState() {
+            super(springWebFlux);
+        }
+    }
+
     @Benchmark
     public String quarkusResteasyReactive(QuarkusResteasyReactiveState state) {
         return runBenchmark(state);
@@ -68,6 +78,11 @@ public abstract class RestBenchmarks implements EnableBenchmark {
 
     @Benchmark
     public String springWeb(SpringWebState state) {
+        return runBenchmark(state);
+    }
+
+    @Benchmark
+    public String springWebFlux(SpringWebFluxState state) {
         return runBenchmark(state);
     }
 

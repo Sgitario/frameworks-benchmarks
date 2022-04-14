@@ -17,8 +17,7 @@ import io.jcloud.api.Quarkus;
 import io.jcloud.api.RestService;
 import io.restassured.http.ContentType;
 
-@Disabled
-@JCloud
+@JCloud(enableProfiling = true)
 public class QuarkusIT {
 
     private static final String FRUITS_PATH = "/api/fruits";

@@ -9,6 +9,17 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>data-reactive-benchmark-quarkus</artifactId>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>${quarkus.platform.group-id}</groupId>
+        <artifactId>${quarkus.platform.artifact-id}</artifactId>
+        <version>${quarkus.platform.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>io.quarkus</groupId>

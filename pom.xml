@@ -30,7 +30,7 @@
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <quarkus.platform.version>2.8.1.Final</quarkus.platform.version>
     <!-- Spring -->
-    <spring.boot.version>2.6.6</spring.boot.version>
+    <spring.boot.version>2.6.7</spring.boot.version>
     <!-- Databases -->
     <postgresql.version>42.3.4</postgresql.version>
   </properties>

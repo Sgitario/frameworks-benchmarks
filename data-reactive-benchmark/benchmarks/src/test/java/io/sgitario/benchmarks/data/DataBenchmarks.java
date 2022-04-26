@@ -24,7 +24,7 @@ import io.jcloud.core.ServiceState;
 
 @JCloud
 @Fork(3)
-@Warmup(iterations = 1)
+@Warmup(iterations = 3, batchSize = 1000)
 @Measurement(iterations = 3)
 @Threads(50)
 public abstract class DataBenchmarks implements EnableBenchmark {
@@ -61,16 +61,16 @@ public abstract class DataBenchmarks implements EnableBenchmark {
     }
 
     @Benchmark
-    public HttpResponse<InputStream> quarkus(QuarkusState state) {
+    public Integer quarkus(QuarkusState state) {
         return runBenchmark(state);
     }
 
     @Benchmark
-    public HttpResponse<InputStream> spring(SpringState state) {
+    public Integer spring(SpringState state) {
         return runBenchmark(state);
     }
 
-    private HttpResponse<InputStream> runBenchmark(ServiceState<HttpService> state) {
+    private Integer runBenchmark(ServiceState<HttpService> state) {
         Integer id =
                 (Integer) state.getService().postAsJson(Collections.singletonMap("name", "Lemon"), FRUITS_PATH)
                         .body().get().get("id");
@@ -81,6 +81,6 @@ public abstract class DataBenchmarks implements EnableBenchmark {
         assertEquals(id, fruit.get("id"));
         assertEquals("Lemon", fruit.get("name"));
 
-        return state.getService().delete(String.format("%s/%d",FRUITS_PATH, id));
+        return id;
     }
 }

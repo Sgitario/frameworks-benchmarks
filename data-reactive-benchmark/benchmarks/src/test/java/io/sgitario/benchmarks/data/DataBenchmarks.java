@@ -61,16 +61,16 @@ public abstract class DataBenchmarks implements EnableBenchmark {
     }
 
     @Benchmark
-    public Integer quarkus(QuarkusState state) {
+    public HttpResponse<InputStream> quarkus(QuarkusState state) {
         return runBenchmark(state);
     }
 
     @Benchmark
-    public Integer spring(SpringState state) {
+    public HttpResponse<InputStream> spring(SpringState state) {
         return runBenchmark(state);
     }
 
-    private Integer runBenchmark(ServiceState<HttpService> state) {
+    private HttpResponse<InputStream> runBenchmark(ServiceState<HttpService> state) {
         Integer id =
                 (Integer) state.getService().postAsJson(Collections.singletonMap("name", "Lemon"), FRUITS_PATH)
                         .body().get().get("id");
@@ -81,6 +81,6 @@ public abstract class DataBenchmarks implements EnableBenchmark {
         assertEquals(id, fruit.get("id"));
         assertEquals("Lemon", fruit.get("name"));
 
-        return id;
+        return state.getService().delete(String.format("%s/%d",FRUITS_PATH, id));
     }
 }

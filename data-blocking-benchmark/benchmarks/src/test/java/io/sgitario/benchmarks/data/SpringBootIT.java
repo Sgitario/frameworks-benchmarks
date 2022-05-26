@@ -4,35 +4,21 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.emptyString;
 import static org.hamcrest.Matchers.not;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.net.http.HttpResponse;
 import java.util.Collections;
 
-import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.annotations.BenchmarkMode;
-import org.openjdk.jmh.annotations.Fork;
-import org.openjdk.jmh.annotations.Measurement;
-import org.openjdk.jmh.annotations.Mode;
-import org.openjdk.jmh.annotations.Threads;
-import org.openjdk.jmh.annotations.Warmup;
 
-import io.jcloud.api.DatabaseService;
-import io.jcloud.api.HttpService;
-import io.jcloud.api.JCloud;
-import io.jcloud.api.PostgresqlContainer;
-import io.jcloud.api.Quarkus;
-import io.jcloud.api.RestService;
-import io.jcloud.api.Spring;
-import io.jcloud.core.EnableBenchmark;
-import io.jcloud.core.ServiceState;
+import io.jester.api.DatabaseService;
+import io.jester.api.Jester;
+import io.jester.api.PostgresqlContainer;
+import io.jester.api.RestService;
+import io.jester.api.Spring;
 import io.restassured.http.ContentType;
 
 @Disabled
-@JCloud
+@Jester
 public class SpringBootIT {
 
     private static final String FRUITS_PATH = "/api/fruits";

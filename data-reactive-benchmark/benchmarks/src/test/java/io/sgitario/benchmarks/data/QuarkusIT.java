@@ -10,14 +10,15 @@ import java.util.Collections;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import io.jcloud.api.DatabaseService;
-import io.jcloud.api.JCloud;
-import io.jcloud.api.PostgresqlContainer;
-import io.jcloud.api.Quarkus;
-import io.jcloud.api.RestService;
+import io.jester.api.DatabaseService;
+import io.jester.api.Jester;
+import io.jester.api.PostgresqlContainer;
+import io.jester.api.Quarkus;
+import io.jester.api.RestService;
 import io.restassured.http.ContentType;
 
-@JCloud(enableProfiling = true)
+@Disabled
+@Jester(enableProfiling = true)
 public class QuarkusIT {
 
     private static final String FRUITS_PATH = "/api/fruits";

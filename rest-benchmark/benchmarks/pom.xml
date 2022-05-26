@@ -12,20 +12,20 @@
 
   <dependencies>
     <dependency>
-      <groupId>io.jcloud</groupId>
-      <artifactId>jcloud-benchmark</artifactId>
+      <groupId>io.jester</groupId>
+      <artifactId>jester-benchmark</artifactId>
       <scope>test</scope>
     </dependency>
 
     <dependency>
-      <groupId>io.jcloud</groupId>
-      <artifactId>jcloud-quarkus</artifactId>
+      <groupId>io.jester</groupId>
+      <artifactId>jester-quarkus</artifactId>
       <scope>test</scope>
     </dependency>
 
     <dependency>
-      <groupId>io.jcloud</groupId>
-      <artifactId>jcloud-spring</artifactId>
+      <groupId>io.jester</groupId>
+      <artifactId>jester-spring</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>

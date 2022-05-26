@@ -25,10 +25,10 @@ jobs:
           distribution: 'temurin'
           java-version: ${{ matrix.java }}
           check-latest: true
-      - name: Build jCloud (temporal)
+      - name: Build Cloud Test Framework (temporal)
         run: |
-          git clone https://github.com/Sgitario/jcloud-unit/
-          cd jcloud-unit
+          git clone https://github.com/Sgitario/jester/
+          cd jester
           mvn -s ../.github/mvn-settings.xml clean install -Pframework -DskipTests
       - name: Run Benchmarks
         run: |

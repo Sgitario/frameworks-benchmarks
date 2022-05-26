@@ -13,16 +13,16 @@ import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.Threads;
 import org.openjdk.jmh.annotations.Warmup;
 
-import io.jcloud.api.DatabaseService;
-import io.jcloud.api.HttpService;
-import io.jcloud.api.JCloud;
-import io.jcloud.api.PostgresqlContainer;
-import io.jcloud.api.Quarkus;
-import io.jcloud.api.Spring;
-import io.jcloud.core.EnableBenchmark;
-import io.jcloud.core.ServiceState;
+import io.jester.api.DatabaseService;
+import io.jester.api.HttpService;
+import io.jester.api.Jester;
+import io.jester.api.PostgresqlContainer;
+import io.jester.api.Quarkus;
+import io.jester.api.Spring;
+import io.jester.core.EnableBenchmark;
+import io.jester.core.ServiceState;
 
-@JCloud
+@Jester
 @Fork(3)
 @Warmup(iterations = 3, batchSize = 1000)
 @Measurement(iterations = 3)

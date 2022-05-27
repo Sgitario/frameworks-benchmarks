@@ -10,6 +10,7 @@ import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.Threads;
 import org.openjdk.jmh.annotations.Warmup;
 
+import io.jester.api.BenchmarkConfiguration;
 import io.jester.api.HttpService;
 import io.jester.api.Jester;
 import io.jester.api.Quarkus;
@@ -22,6 +23,7 @@ import io.jester.core.ServiceState;
 @Warmup(iterations = 1)
 @Measurement(iterations = 3)
 @Threads(50)
+@BenchmarkConfiguration(outputLocation = "../results")
 public abstract class RestBenchmarks implements EnableBenchmark {
 
     @Quarkus(location = "../quarkus-resteasy-reactive")

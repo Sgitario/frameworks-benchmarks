@@ -13,6 +13,7 @@ import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.Threads;
 import org.openjdk.jmh.annotations.Warmup;
 
+import io.jester.api.BenchmarkConfiguration;
 import io.jester.api.DatabaseService;
 import io.jester.api.HttpService;
 import io.jester.api.Jester;
@@ -27,6 +28,7 @@ import io.jester.core.ServiceState;
 @Warmup(iterations = 1)
 @Measurement(iterations = 3)
 @Threads(50)
+@BenchmarkConfiguration(outputLocation = "../results")
 public abstract class DataBenchmarks implements EnableBenchmark {
 
     private static final String FRUITS_PATH = "/api/fruits";

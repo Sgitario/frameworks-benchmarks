@@ -1,7 +1,9 @@
-name: "Pull Request Build"
+name: "Push Build"
 on:
-  - workflow_dispatch
-  - pull_request
+  workflow_dispatch:
+  push:
+    branches:
+      - main
 jobs:
   linux-build-jvm:
     name: Linux - Benchmarks - Java
@@ -33,11 +35,14 @@ jobs:
       - name: Run Benchmarks
         run: |
           mvn -s .github/mvn-settings.xml clean install
-      - name: Zip Benchmark Results
+      - name: Persist Benchmark Results
         run: |
-          zip -R benchmark-results-linux-jvm${{ matrix.java }}.zip 'results/*'
-      - name: Archive Benchmark Results
-        uses: actions/upload-artifact@v1
+          git config --global user.name 'Sgitario'
+          git config --global user.email 'josecarvajalhilario@gmail.com'
+          git add --all
+          git commit -m "Update benchmark results"
+      - name: Push Benchmark Results
+        uses: ad-m/github-push-action@master
         with:
-          name: benchmark-results-linux-jvm${{ matrix.java }}
-          path: benchmark-results-linux-jvm${{ matrix.java }}.zip
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true

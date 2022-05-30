@@ -28,3 +28,6 @@ target
 # Idea
 .idea
 *.iml
+
+# Jester
+jester

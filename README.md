@@ -1,8 +1,8 @@
 # Benchmark Results
 
 API Framework Versions:
-- Quarkus 1.8.0.Final
-- Spring Boot 2.6.6
+- Quarkus 2.9.2.Final
+- Spring Boot 2.7.0
 
 ## For Simple REST application
 
@@ -27,17 +27,13 @@ public class PingResource {
 }
 ```
 
-- Throughput
+- Throughput (the higher the better)
 
 ![Throughput](results/rest_Throughput.png)
 
-- Average Time
+- Average Time (the lower the better)
 
 ![Average Time](results/rest_Average_Time.png)
-
-- Single Shot-Time
-
-![Single Shot-Time](results/rest_Single_ShotTime.png)
 
 ## For Data Blocking application
 
@@ -86,30 +82,22 @@ public class FruitResource {
 }
 ```
 
-- Throughput
+- Throughput (the higher the better)
 
 ![Throughput](results/data_blocking_Throughput.png)
 
-- Average Time
+- Average Time (the lower the better)
 
 ![Average Time](results/data_blocking_Average_Time.png)
-
-- Single Shot-Time
-
-![Single Shot-Time](results/data_blocking_Single_ShotTime.png)
 
 ## For Data Reactive application
 
 Same application as in [Data Blocking application](#for-data-blocking-application) but using the Reactive API for both Quarkus and Spring. 
 
-- Throughput
+- Throughput (the higher the better)
 
 ![Throughput](results/data_reactive_Throughput.png)
 
-- Average Time
+- Average Time (the lower the better)
 
 ![Average Time](results/data_reactive_Average_Time.png)
-
-- Single Shot-Time
-
-![Single Shot-Time](results/data_reactive_Single_ShotTime.png)

@@ -32,7 +32,7 @@
     <!-- Spring -->
     <spring.boot.version>2.7.2</spring.boot.version>
     <!-- Databases -->
-    <postgresql.version>42.4.1</postgresql.version>
+    <postgresql.version>42.4.2</postgresql.version>
   </properties>
   <dependencyManagement>
     <dependencies>

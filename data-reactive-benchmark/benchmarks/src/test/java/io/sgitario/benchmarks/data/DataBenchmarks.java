@@ -13,15 +13,15 @@ import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.Threads;
 import org.openjdk.jmh.annotations.Warmup;
 
-import io.jester.api.BenchmarkConfiguration;
-import io.jester.api.DatabaseService;
-import io.jester.api.HttpService;
-import io.jester.api.Jester;
-import io.jester.api.PostgresqlContainer;
-import io.jester.api.Quarkus;
-import io.jester.api.Spring;
-import io.jester.core.EnableBenchmark;
-import io.jester.core.ServiceState;
+import io.github.snowdrop.jester.api.BenchmarkConfiguration;
+import io.github.snowdrop.jester.api.DatabaseService;
+import io.github.snowdrop.jester.api.HttpService;
+import io.github.snowdrop.jester.api.Jester;
+import io.github.snowdrop.jester.api.PostgresqlContainer;
+import io.github.snowdrop.jester.api.Quarkus;
+import io.github.snowdrop.jester.api.Spring;
+import io.github.snowdrop.jester.core.EnableBenchmark;
+import io.github.snowdrop.jester.core.ServiceState;
 
 @Jester
 @Fork(3)

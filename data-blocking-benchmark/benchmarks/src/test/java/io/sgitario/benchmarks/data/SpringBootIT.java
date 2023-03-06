@@ -10,11 +10,11 @@ import java.util.Collections;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import io.jester.api.DatabaseService;
-import io.jester.api.Jester;
-import io.jester.api.PostgresqlContainer;
-import io.jester.api.RestService;
-import io.jester.api.Spring;
+import io.github.snowdrop.jester.api.DatabaseService;
+import io.github.snowdrop.jester.api.Jester;
+import io.github.snowdrop.jester.api.PostgresqlContainer;
+import io.github.snowdrop.jester.api.RestService;
+import io.github.snowdrop.jester.api.Spring;
 import io.restassured.http.ContentType;
 
 @Disabled

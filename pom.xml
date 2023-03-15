@@ -24,7 +24,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <surefire-plugin.version>2.22.2</surefire-plugin.version>
     <failsafe-plugin.version>2.22.2</failsafe-plugin.version>
-    <jester.version>0.0.3</jester.version>
+    <jester.version>0.0.4</jester.version>
     <!-- Quarkus -->
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
